@@ -45,13 +45,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # CorsMiddleware должен быть здесь
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 REST_FRAMEWORK = {
@@ -129,6 +129,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     'http://213.109.146.205:3000',  # Ваш фронтенд адрес
 ]
+
+CORS_PREFLIGHT_MAX_AGE = 86400 
 
 
 # Static files (CSS, JavaScript, Images)
