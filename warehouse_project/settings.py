@@ -126,6 +126,10 @@ USE_TZ = True
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ALLOWED_ORIGINS = [
+    'http://213.109.146.205:3000',  # Ваш фронтенд адрес
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
